@@ -1,8 +1,16 @@
-import React from 'react'
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/custom/dashboard/AppSidebar"
+ 
 
 const DashboardLayout = ({children}:any) => {
   return (
-    <div>{children}</div>
+    <SidebarProvider>
+      <AppSidebar />
+      <main>
+        <SidebarTrigger />
+        {children}
+      </main>
+    </SidebarProvider>
   )
 }
 
