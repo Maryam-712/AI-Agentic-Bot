@@ -6,10 +6,10 @@ const DashboardLayout = ({children}:any) => {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main>
         <SidebarTrigger />
-        {children}
-      </main>
+
+      <div className="w-full"> {children}</div>
+
     </SidebarProvider>
   )
 }
